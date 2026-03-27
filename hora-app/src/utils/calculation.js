@@ -69,7 +69,7 @@ const DAY_MAP = {
 // Each row: [startHour (0-23), endHour (exclusive), lord]
 // 24 Horas in a day, ruled by planets in Chaldean order
 // Chaldean order: Sun, Venus, Mercury, Moon, Saturn, Jupiter, Mars
-const CHALDEAN_ORDER = ["Sun", "Venus", "Mercury", "Moon", "Saturn", "Jupiter", "Mars"];
+const CHALDEAN_ORDER = ["Sun", "Venus", "Mercury", "Moon", "Saturn", "Jupiter", "Mars","RAHU","KETU"];
 
 // Day rulers (Sunday=Sun, Monday=Moon, Tuesday=Mars, Wednesday=Mercury,
 //             Thursday=Jupiter, Friday=Venus, Saturday=Saturn)
@@ -87,11 +87,13 @@ const DAY_RULERS = {
 const PLANET_ASCENDANT = {
   Sun: 1,
   Moon: 2,
-  Mars: 3,
+  Jupiter: 3,
   Mercury: 4,
-  Jupiter: 5,
+  RAHU: 5,
   Venus: 6,
-  Saturn: 7,
+  KETU : 7,
+  Saturn: 8,
+  Mars: 9,
 };
 
 // ─── Helpers ───────────────────────────────────────────────────────────────
