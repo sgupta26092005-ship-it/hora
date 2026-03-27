@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import HOUSE_RESULTS from "../utils/houseresulta";
+import HOUSE_RESULTS from "../utils/houseresults";
 
 const PLANET_ASCENDANT = {
   Sun: 1,
