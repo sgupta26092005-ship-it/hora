@@ -182,3 +182,35 @@ export function calculateHora({ day, month, year, hour ,ampm}) {
 }
 
 export { DAY_RULERS, PLANET_ASCENDANT };
+
+// reverse mapping (number → planet)
+const NUMBER_TO_PLANET = {};
+for (let planet in PLANET_ASCENDANT) {
+  NUMBER_TO_PLANET[PLANET_ASCENDANT[planet]] = planet;
+}
+
+// function to get houses for one ascendant
+function getHousePlanets(ascendant) {
+  let houses = {};
+
+  for (let i = 0; i < 9; i++) {
+    let num = ((ascendant - 1 + i) % 9) + 1;
+    houses[`House ${i + 1}`] = NUMBER_TO_PLANET[num];
+  }
+
+  return houses;
+}
+
+// function to print all ascendants (1 to 9)
+function getAllAscendants() {
+  let result = {};
+
+  for (let asc = 1; asc <= 9; asc++) {
+    result[`Ascendant ${asc}`] = getHousePlanets(asc);
+  }
+
+  return result;
+}
+
+// 👉 FINAL OUTPUT
+console.log(getAllAscendants());

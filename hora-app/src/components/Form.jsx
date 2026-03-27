@@ -180,7 +180,7 @@ export default function Form() {
             </table>
           </details>
 
-          <button className="more-info-btn" onClick={() => navigate('/more-info')}>More Info</button>
+          <button className="more-info-btn" onClick={() => navigate('/more-info', { state: { ascendant: result.ascendantNumber } })}>More Info</button>
 
         </div>
       )}
