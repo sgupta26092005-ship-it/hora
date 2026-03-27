@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { calculateHora } from "../utils/calculation";
+
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -50,6 +52,7 @@ export default function Form() {
   }
 
   const accentColor = result ? PLANET_COLORS[result.horaLord] : "#6366f1";
+  const navigate = useNavigate();
 
   return (
     <div className="app-wrapper">
@@ -176,6 +179,9 @@ export default function Form() {
               </tbody>
             </table>
           </details>
+
+          <button className="more-info-btn" onClick={() => navigate('/more-info')}>More Info</button>
+
         </div>
       )}
 
@@ -256,6 +262,15 @@ export default function Form() {
         .calc-btn:hover { opacity: 0.9; }
         .calc-btn:active { transform: scale(0.98); }
         .btn-glyph { font-size: 0.8rem; }
+
+        .more-info-btn {
+          width: 100%; padding: 0.7rem; margin-top: 1rem;
+          background: #2e2650;
+          color: #c4b5fd; border: 1px solid #4c1d95; border-radius: 8px;
+          font-size: 0.9rem; font-family: inherit; letter-spacing: 0.05em;
+          cursor: pointer; transition: background 0.2s, color 0.2s;
+        }
+        .more-info-btn:hover { background: #4c1d95; color: #f0eaff; }
 
         .result-card {
           margin-top: 1.75rem;
