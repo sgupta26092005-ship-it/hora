@@ -264,13 +264,15 @@ export default function Form() {
         .btn-glyph { font-size: 0.8rem; }
 
         .more-info-btn {
-          width: 100%; padding: 0.7rem; margin-top: 1rem;
-          background: #2e2650;
-          color: #c4b5fd; border: 1px solid #4c1d95; border-radius: 8px;
-          font-size: 0.9rem; font-family: inherit; letter-spacing: 0.05em;
-          cursor: pointer; transition: background 0.2s, color 0.2s;
+          width: 100%; padding: 0.8rem; margin-top: 1.5rem;
+          background: linear-gradient(135deg, #6d28d9, #7c3aed);
+          color: #f0eaff; border: none; border-radius: 10px;
+          font-size: 0.95rem; font-family: inherit; letter-spacing: 0.06em;
+          font-weight: 600;
+          cursor: pointer; transition: opacity 0.2s, transform 0.1s;
         }
-        .more-info-btn:hover { background: #4c1d95; color: #f0eaff; }
+        .more-info-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .more-info-btn:active { transform: translateY(0); }
 
         .result-card {
           margin-top: 1.75rem;
