@@ -57,7 +57,7 @@ doctors, or politicians.
           3: { result: `` },
           4: { result: `` },
           5: { result: `` },
-          6: { result: `` },
+          6: { result: `1111` },
           7: { result: `` },
           8: { result: `` },
           9: { result: `` },
