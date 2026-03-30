@@ -1,5 +1,5 @@
 import { jsPDF } from "jspdf";
-import { astroData } from "../data/astroData";
+import { astroData } from "./data/astroData";
 
 // SAME mapping
 const PLANET_ASCENDANT = {
